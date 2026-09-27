@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+  }
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Cinzel', 'Hind Siliguri', serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f15;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2e3d;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  background: rgba(18, 20, 29, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.glass-panel-subtle {
+  background: rgba(18, 20, 29, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff2be 0%, #e6c367 50%, #c5973b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #dfb755 0%, #b8861d 100%);
+  color: #0d0e14;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.gold-gradient-btn:hover {
+  background: linear-gradient(135deg, #ebd17a 0%, #c99a2c 100%);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+}
+
+/* Lamp glow pulse animations */
+@keyframes warmBulbGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 60px rgba(255, 179, 0, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 32px rgba(255, 225, 50, 0.95)) drop-shadow(0 0 85px rgba(255, 190, 20, 0.65));
+  }
+}
+
+.lamp-glowing {
+  animation: warmBulbGlow 3s ease-in-out infinite alternate;
+}

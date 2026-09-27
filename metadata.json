@@ -1,0 +1,6 @@
+{
+  "name": "Online Dress Mart",
+  "description": "Modern, mobile-friendly online dress shopping e-commerce website with interactive lamp login, real-time AI assistant, complete order and product management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
