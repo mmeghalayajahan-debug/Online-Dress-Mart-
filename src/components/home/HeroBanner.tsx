@@ -37,21 +37,21 @@ export const HeroBanner: React.FC = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-serif-luxury tracking-tight text-white leading-tight">
-              অনলাইন ড্রেস মার্ট <br />
-              <span className="gold-gradient-text">এক্সক্লুসিভ ফ্যাশন সম্ভার</span>
+            <h1 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-black font-serif-luxury tracking-normal text-white leading-tight break-words">
+              অনলাইন ড্রেস মার্ট <br className="hidden xs:inline" />
+              <span className="gold-gradient-text block xs:inline mt-1 xs:mt-0">এক্সক্লুসিভ ফ্যাশন সম্ভার</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p className="text-xs xs:text-sm sm:text-base md:text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
               অভিজাত কাতান ও জামদানি শাড়ি, ভারী কারুকাজের ডিজাইনার থ্রি-পিস, রাজকীয় ব্রাইডাল লেহেঙ্গা এবং আরামদায়ক কুর্তির প্রিমিয়াম কালেকশন।
             </p>
 
             {/* Action Buttons: Order Now, Call, WhatsApp, Facebook */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-2 w-full max-w-md mx-auto lg:max-w-none">
               <button
                 onClick={scrollToProducts}
-                className="px-6 py-3.5 rounded-full gold-gradient-btn text-sm font-bold flex items-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 transition-all"
+                className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-3.5 rounded-full gold-gradient-btn text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 transition-all"
               >
                 <span>পোশাক দেখুন ও অর্ডার করুন</span>
                 <ArrowRight size={16} />
@@ -59,9 +59,9 @@ export const HeroBanner: React.FC = () => {
 
               <a
                 href={`tel:${storeSettings.hotline}`}
-                className="px-5 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold flex items-center gap-2 transition-all hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto px-4 sm:px-5 py-3 sm:py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
               >
-                <Phone size={16} className="text-emerald-400" />
+                <Phone size={15} className="text-emerald-400 shrink-0" />
                 <span>সরাসরি কল: {storeSettings.hotline}</span>
               </a>
 
@@ -69,9 +69,9 @@ export const HeroBanner: React.FC = () => {
                 href={`https://wa.me/88${storeSettings.whatsapp}?text=${encodeURIComponent('Hello Online Dress Mart, I want to order a dress.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-3.5 rounded-full bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/40 text-[#25D366] text-sm font-semibold flex items-center gap-2 transition-all hover:scale-105"
+                className="w-full sm:w-auto px-4 sm:px-5 py-3 sm:py-3.5 rounded-full bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/40 text-[#25D366] text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105"
               >
-                <MessageCircle size={17} />
+                <MessageCircle size={16} className="shrink-0" />
                 <span>WhatsApp অর্ডার</span>
               </a>
 
@@ -79,15 +79,15 @@ export const HeroBanner: React.FC = () => {
                 href={storeSettings.facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-3.5 rounded-full bg-[#1877F2]/15 hover:bg-[#1877F2]/25 border border-[#1877F2]/40 text-[#1877F2] text-sm font-semibold flex items-center gap-2 transition-all hover:scale-105"
+                className="w-full sm:w-auto px-4 py-3 sm:py-3.5 rounded-full bg-[#1877F2]/15 hover:bg-[#1877F2]/25 border border-[#1877F2]/40 text-[#1877F2] text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105"
               >
-                <Facebook size={17} />
+                <Facebook size={16} className="shrink-0" />
                 <span>Facebook Page</span>
               </a>
             </div>
 
             {/* Trust Badges */}
-            <div className="grid grid-cols-3 gap-3 pt-6 border-t border-white/10 text-left">
+            <div className="grid grid-cols-1 xs:grid-cols-3 gap-3 pt-6 border-t border-white/10 text-left">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
                   <Truck size={16} className="text-amber-400" />

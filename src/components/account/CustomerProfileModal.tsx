@@ -50,13 +50,13 @@ export const CustomerProfileModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#121422] border border-[#d4af37]/35 shadow-[0_20px_60px_rgba(0,0,0,0.9)] p-5 sm:p-8 text-white my-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 xs:p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto rounded-2xl xs:rounded-3xl bg-[#121422] border border-[#d4af37]/35 shadow-[0_20px_60px_rgba(0,0,0,0.9)] p-3.5 xs:p-5 sm:p-8 text-white my-auto">
         {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-white/10">
-          <div className="flex items-center gap-3">
+        <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-white/10">
+          <div className="flex items-center gap-2 xs:gap-3 min-w-0">
             {/* Official Store Logo Badge */}
-            <div className="w-13 h-13 rounded-full overflow-hidden border border-[#d4af37]/60 shadow-[0_0_15px_rgba(212,175,55,0.4)] shrink-0 p-[1px] bg-gradient-to-tr from-[#916b1e] via-[#ffdf79] to-[#916b1e]">
+            <div className="w-10 h-10 xs:w-12 xs:h-12 rounded-full overflow-hidden border border-[#d4af37]/60 shadow-[0_0_15px_rgba(212,175,55,0.4)] shrink-0 p-[1px] bg-gradient-to-tr from-[#916b1e] via-[#ffdf79] to-[#916b1e]">
               <img
                 src="/logo.jpg"
                 alt="Online Dress Mart"
@@ -64,16 +64,16 @@ export const CustomerProfileModal: React.FC = () => {
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <h2 className="text-lg sm:text-xl font-bold font-serif-luxury text-white">
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <h2 className="text-base sm:text-xl font-bold font-serif-luxury text-white truncate">
                   {currentUser.name}
                 </h2>
-                <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#d4af37]/20 text-[#ffd700] border border-[#d4af37]/40 font-semibold">
+                <span className="text-[9px] xs:text-[10px] px-2 py-0.5 rounded-full bg-[#d4af37]/20 text-[#ffd700] border border-[#d4af37]/40 font-semibold">
                   Member
                 </span>
               </div>
-              <p className="text-xs text-gray-400">{currentUser.email}</p>
+              <p className="text-[11px] xs:text-xs text-gray-400 truncate">{currentUser.email}</p>
             </div>
           </div>
 

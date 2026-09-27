@@ -18,12 +18,12 @@ import { AiCustomerAssistant } from './components/ai/AiCustomerAssistant';
 export default function App() {
   return (
     <StoreProvider>
-      <div className="min-h-screen bg-[#0c0d14] text-[#e8e9ed] flex flex-col font-sans selection:bg-[#d4af37]/30 selection:text-[#ffd700]">
+      <div className="min-h-screen bg-[#0c0d14] text-[#e8e9ed] flex flex-col font-sans selection:bg-[#d4af37]/30 selection:text-[#ffd700] overflow-x-hidden w-full max-w-full">
         {/* Navigation Bar */}
         <Navbar />
 
         {/* Main Content Area */}
-        <main className="flex-1">
+        <main className="flex-1 pb-14 sm:pb-0">
           {/* Hero Banner with Brand Story and Actions */}
           <HeroBanner />
 

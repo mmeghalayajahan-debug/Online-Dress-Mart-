@@ -98,12 +98,12 @@ export const CheckoutModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#121422] border border-[#d4af37]/35 shadow-[0_20px_60px_rgba(0,0,0,0.9)] p-5 sm:p-8 text-white my-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 xs:p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-2xl xs:rounded-3xl bg-[#121422] border border-[#d4af37]/35 shadow-[0_20px_60px_rgba(0,0,0,0.9)] p-3.5 xs:p-5 sm:p-8 text-white my-auto">
         {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full overflow-hidden border border-[#d4af37]/60 shadow-[0_0_15px_rgba(212,175,55,0.4)] shrink-0 p-[1px] bg-gradient-to-tr from-[#916b1e] via-[#ffdf79] to-[#916b1e]">
+        <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-white/10 mb-4 sm:mb-6">
+          <div className="flex items-center gap-2 xs:gap-3 min-w-0">
+            <div className="w-9 h-9 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-[#d4af37]/60 shadow-[0_0_15px_rgba(212,175,55,0.4)] shrink-0 p-[1px] bg-gradient-to-tr from-[#916b1e] via-[#ffdf79] to-[#916b1e]">
               <img
                 src="/logo.jpg"
                 alt="Online Dress Mart"
@@ -111,20 +111,20 @@ export const CheckoutModal: React.FC = () => {
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold font-serif-luxury text-white">
+            <div className="min-w-0">
+              <h2 className="text-base xs:text-lg sm:text-2xl font-bold font-serif-luxury text-white truncate">
                 চেকআউট ও ডেলিভারি তথ্য
               </h2>
-              <p className="text-xs text-gray-400 mt-0.5">
-                Online Dress Mart · ক্যাশ অন ডেলিভারি ও দ্রুত শিপিং
+              <p className="text-[10px] xs:text-xs text-gray-400 mt-0.5 truncate">
+                Online Dress Mart · ক্যাশ অন ডেলিভারি
               </p>
             </div>
           </div>
           <button
             onClick={() => setIsCheckoutOpen(false)}
-            className="p-2 rounded-full hover:bg-white/10 text-gray-400 hover:text-white"
+            className="p-1.5 xs:p-2 rounded-full hover:bg-white/10 text-gray-400 hover:text-white shrink-0 ml-1"
           >
-            <X size={20} />
+            <X size={18} />
           </button>
         </div>
 

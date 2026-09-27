@@ -69,9 +69,9 @@ export const ProductDetailsModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 xs:p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto animate-fadeIn">
       {/* Container Card */}
-      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#121422] border border-[#d4af37]/30 shadow-[0_20px_70px_rgba(0,0,0,0.9)] p-5 sm:p-8 text-white my-auto">
+      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl xs:rounded-3xl bg-[#121422] border border-[#d4af37]/30 shadow-[0_20px_70px_rgba(0,0,0,0.9)] p-3.5 xs:p-5 sm:p-8 text-white my-auto">
         {/* Close Button */}
         <button
           onClick={() => setSelectedProduct(null)}

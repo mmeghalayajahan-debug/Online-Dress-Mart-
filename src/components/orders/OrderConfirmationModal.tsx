@@ -17,12 +17,12 @@ export const OrderConfirmationModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#121422] border border-[#d4af37]/40 shadow-[0_20px_70px_rgba(0,0,0,0.9)] p-5 sm:p-8 text-white my-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 xs:p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-xl max-h-[92vh] overflow-y-auto rounded-2xl xs:rounded-3xl bg-[#121422] border border-[#d4af37]/40 shadow-[0_20px_70px_rgba(0,0,0,0.9)] p-3.5 xs:p-5 sm:p-8 text-white my-auto">
         {/* Success Icon & Header */}
-        <div className="text-center space-y-2 pb-6 border-b border-white/10">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <div className="w-14 h-14 rounded-full overflow-hidden border border-[#d4af37]/60 shadow-[0_0_15px_rgba(212,175,55,0.4)] p-[1px] bg-gradient-to-tr from-[#916b1e] via-[#ffdf79] to-[#916b1e]">
+        <div className="text-center space-y-2 pb-5 sm:pb-6 border-b border-white/10">
+          <div className="flex items-center justify-center gap-2.5 sm:gap-3 mb-2">
+            <div className="w-11 h-11 xs:w-14 xs:h-14 rounded-full overflow-hidden border border-[#d4af37]/60 shadow-[0_0_15px_rgba(212,175,55,0.4)] p-[1px] bg-gradient-to-tr from-[#916b1e] via-[#ffdf79] to-[#916b1e]">
               <img
                 src="/logo.jpg"
                 alt="Online Dress Mart"
@@ -30,14 +30,14 @@ export const OrderConfirmationModal: React.FC = () => {
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-            <div className="w-14 h-14 rounded-full bg-emerald-500/20 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-              <CheckCircle2 size={32} />
+            <div className="w-11 h-11 xs:w-14 xs:h-14 rounded-full bg-emerald-500/20 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+              <CheckCircle2 size={26} className="xs:w-8 xs:h-8" />
             </div>
           </div>
-          <span className="text-xs uppercase tracking-widest text-[#ffd700] font-semibold">
+          <span className="text-[11px] xs:text-xs uppercase tracking-widest text-[#ffd700] font-semibold">
             {storeSettings.brandName}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold font-serif-luxury text-white">
+          <h2 className="text-lg xs:text-2xl sm:text-3xl font-bold font-serif-luxury text-white">
             অর্ডারটি সফলভাবে গৃহীত হয়েছে!
           </h2>
           <p className="text-xs sm:text-sm text-gray-300">

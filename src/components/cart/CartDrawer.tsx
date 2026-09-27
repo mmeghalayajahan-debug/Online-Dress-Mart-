@@ -34,7 +34,7 @@ export const CartDrawer: React.FC = () => {
       />
 
       {/* Slide-over panel */}
-      <div className="fixed inset-y-0 right-0 max-w-full flex pl-6 sm:pl-10">
+      <div className="fixed inset-y-0 right-0 max-w-full flex pl-2 xs:pl-6 sm:pl-10">
         <div className="w-screen max-w-md bg-[#111320] border-l border-[#d4af37]/30 shadow-2xl flex flex-col text-white">
           {/* Header */}
           <div className="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between">

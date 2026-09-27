@@ -215,18 +215,18 @@ export const AiCustomerAssistant: React.FC = () => {
   return (
     <>
       {/* Floating Toggle Button */}
-      <div className="fixed bottom-5 right-5 z-40">
+      <div className="fixed bottom-18 xs:bottom-20 sm:bottom-6 right-3 xs:right-4 sm:right-6 z-40">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative p-3.5 sm:p-4 rounded-full bg-gradient-to-tr from-[#916b1e] via-[#d4af37] to-[#ffd700] text-gray-950 shadow-[0_0_25px_rgba(212,175,55,0.5)] hover:scale-110 active:scale-95 transition-all group"
+          className="relative p-3 xs:p-3.5 sm:p-4 rounded-full bg-gradient-to-tr from-[#916b1e] via-[#d4af37] to-[#ffd700] text-gray-950 shadow-[0_0_25px_rgba(212,175,55,0.5)] hover:scale-110 active:scale-95 transition-all group"
           aria-label="AI Assistant"
         >
-          {isOpen ? <X size={24} /> : <Bot size={24} />}
+          {isOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Bot size={20} className="sm:w-6 sm:h-6" />}
 
           {!isOpen && (
-            <span className="absolute -top-1 -left-1 flex h-4 w-4">
+            <span className="absolute -top-1 -left-1 flex h-3.5 w-3.5 sm:h-4 sm:w-4">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-amber-500" />
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 sm:h-4 sm:w-4 bg-amber-500" />
             </span>
           )}
         </button>
@@ -234,7 +234,7 @@ export const AiCustomerAssistant: React.FC = () => {
 
       {/* Floating Chat Modal */}
       {isOpen && (
-        <div className="fixed bottom-20 right-4 sm:right-6 z-40 w-[94vw] sm:w-[380px] max-h-[580px] rounded-3xl bg-[#121422] border border-[#d4af37]/40 shadow-[0_20px_60px_rgba(0,0,0,0.95)] flex flex-col overflow-hidden text-white animate-scaleUp">
+        <div className="fixed bottom-22 xs:bottom-24 sm:bottom-24 right-2 xs:right-3 sm:right-6 z-50 w-[calc(100vw-16px)] sm:w-[380px] max-h-[75vh] sm:max-h-[580px] rounded-3xl bg-[#121422] border border-[#d4af37]/40 shadow-[0_20px_60px_rgba(0,0,0,0.95)] flex flex-col overflow-hidden text-white animate-scaleUp">
           {/* Header */}
           <div className="p-4 bg-gradient-to-r from-[#171a2b] via-[#211f18] to-[#171a2b] border-b border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-2.5">

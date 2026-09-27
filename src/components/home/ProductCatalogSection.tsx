@@ -69,26 +69,26 @@ export const ProductCatalogSection: React.FC = () => {
   }, [products, selectedCategory, activeTab, inStockOnly, searchQuery, sortBy]);
 
   return (
-    <section id="product-catalog" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <section id="product-catalog" className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-16">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
         <div>
           <span className="text-xs uppercase tracking-widest text-[#d4af37] font-semibold flex items-center gap-1.5">
             <Sparkles size={13} className="text-[#ffd700]" /> এক্সক্লুসিভ কালেকশন
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold font-serif-luxury text-white mt-1">
+          <h2 className="text-xl xs:text-2xl sm:text-4xl font-extrabold font-serif-luxury text-white mt-1">
             পছন্দের পোশাক খুঁজে নিন
           </h2>
-          <p className="text-xs sm:text-sm text-gray-400 mt-1">
+          <p className="text-[11px] xs:text-xs sm:text-sm text-gray-400 mt-0.5 sm:mt-1">
             প্রিমিয়াম কোয়ালিটির শাড়ি, থ্রি-পিস, লেহেঙ্গা ও কুর্তির সমাহার
           </p>
         </div>
 
         {/* Collection Filter Tabs: All, Featured, New Arrivals, Popular */}
-        <div className="flex items-center gap-1 p-1 bg-[#141624] rounded-2xl border border-white/10 self-start md:self-auto overflow-x-auto">
+        <div className="flex items-center gap-1 p-1 bg-[#141624] rounded-2xl border border-white/10 self-start md:self-auto overflow-x-auto no-scrollbar max-w-full">
           <button
             onClick={() => setActiveTab('all')}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
               activeTab === 'all'
                 ? 'bg-gradient-to-r from-[#d4af37] to-[#b8861d] text-gray-950 font-bold shadow-md'
                 : 'text-gray-400 hover:text-white'
@@ -99,7 +99,7 @@ export const ProductCatalogSection: React.FC = () => {
 
           <button
             onClick={() => setActiveTab('featured')}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
               activeTab === 'featured'
                 ? 'bg-gradient-to-r from-[#d4af37] to-[#b8861d] text-gray-950 font-bold shadow-md'
                 : 'text-gray-400 hover:text-white'
@@ -111,7 +111,7 @@ export const ProductCatalogSection: React.FC = () => {
 
           <button
             onClick={() => setActiveTab('new')}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
               activeTab === 'new'
                 ? 'bg-gradient-to-r from-[#d4af37] to-[#b8861d] text-gray-950 font-bold shadow-md'
                 : 'text-gray-400 hover:text-white'
@@ -123,7 +123,7 @@ export const ProductCatalogSection: React.FC = () => {
 
           <button
             onClick={() => setActiveTab('popular')}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
               activeTab === 'popular'
                 ? 'bg-gradient-to-r from-[#d4af37] to-[#b8861d] text-gray-950 font-bold shadow-md'
                 : 'text-gray-400 hover:text-white'
@@ -136,14 +136,14 @@ export const ProductCatalogSection: React.FC = () => {
       </div>
 
       {/* Category Pills & Sorting Bar */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 mb-8 border-b border-white/10">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-6 mb-6 sm:mb-8 border-b border-white/10">
         {/* Categories Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+        <div className="flex items-center gap-1.5 xs:gap-2 overflow-x-auto no-scrollbar pb-1 max-w-full">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+              className={`px-3 xs:px-3.5 py-1.5 rounded-full text-[11px] xs:text-xs font-semibold whitespace-nowrap transition-all ${
                 selectedCategory === cat
                   ? 'bg-white/15 text-[#ffd700] border border-[#d4af37]'
                   : 'bg-white/5 text-gray-400 hover:text-white border border-white/5'
@@ -155,8 +155,8 @@ export const ProductCatalogSection: React.FC = () => {
         </div>
 
         {/* Right Sort & Stock Toggle */}
-        <div className="flex items-center gap-3 shrink-0 self-end lg:self-auto text-xs">
-          <label className="flex items-center gap-2 cursor-pointer text-gray-300">
+        <div className="flex items-center justify-between sm:justify-end gap-2.5 xs:gap-3 text-xs w-full lg:w-auto">
+          <label className="flex items-center gap-1.5 xs:gap-2 cursor-pointer text-gray-300 text-[11px] xs:text-xs">
             <input
               type="checkbox"
               checked={inStockOnly}
@@ -166,12 +166,12 @@ export const ProductCatalogSection: React.FC = () => {
             <span>শুধুমাত্র স্টকে আছে</span>
           </label>
 
-          <div className="flex items-center gap-1.5 bg-[#141624] border border-white/10 rounded-xl px-3 py-1.5">
+          <div className="flex items-center gap-1.5 bg-[#141624] border border-white/10 rounded-xl px-2.5 xs:px-3 py-1.5">
             <SlidersHorizontal size={13} className="text-gray-400" />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-              className="bg-transparent text-white text-xs focus:outline-none cursor-pointer"
+              className="bg-transparent text-white text-[11px] xs:text-xs focus:outline-none cursor-pointer"
             >
               <option value="default" className="bg-[#141624] text-white">সর্ট: ডিফল্ট</option>
               <option value="price_low" className="bg-[#141624] text-white">দাম: কম থেকে বেশি</option>
@@ -217,7 +217,7 @@ export const ProductCatalogSection: React.FC = () => {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 xs:gap-3 sm:gap-6">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

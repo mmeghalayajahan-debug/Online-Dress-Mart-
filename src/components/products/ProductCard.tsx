@@ -101,14 +101,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
 
       {/* Product Content Details */}
-      <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between">
+      <div className="p-2.5 xs:p-3 sm:p-4 flex flex-col flex-1 justify-between">
         <div>
           {/* Category & Rating */}
           <div className="flex items-center justify-between text-xs text-gray-400 mb-1">
-            <span className="font-medium text-[#d4af37] text-[11px]">{product.category}</span>
+            <span className="font-medium text-[#d4af37] text-[10px] xs:text-[11px]">{product.category}</span>
             {product.rating && (
-              <div className="flex items-center gap-1 text-[11px] text-amber-400">
-                <Star size={12} className="fill-amber-400" />
+              <div className="flex items-center gap-1 text-[10px] xs:text-[11px] text-amber-400">
+                <Star size={11} className="fill-amber-400" />
                 <span>{product.rating}</span>
                 <span className="text-gray-500">({product.reviewsCount})</span>
               </div>
@@ -116,68 +116,68 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
 
           {/* Product Bengali Title */}
-          <h3 className="font-bold text-white text-sm sm:text-base line-clamp-1 group-hover:text-[#ffd700] transition-colors">
+          <h3 className="font-bold text-white text-xs xs:text-sm sm:text-base line-clamp-1 group-hover:text-[#ffd700] transition-colors">
             {product.bengaliName || product.name}
           </h3>
 
           {/* English Subtitle */}
-          <p className="text-[11px] sm:text-xs text-gray-400 line-clamp-1 mt-0.5">
+          <p className="text-[10px] xs:text-[11px] sm:text-xs text-gray-400 line-clamp-1 mt-0.5">
             {product.name}
           </p>
 
           {/* Size options preview */}
           {product.availableSizes && product.availableSizes.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-2">
-              {product.availableSizes.slice(0, 4).map((s) => (
+            <div className="flex flex-wrap gap-1 mt-1.5 xs:mt-2">
+              {product.availableSizes.slice(0, 3).map((s) => (
                 <span
                   key={s}
-                  className="text-[10px] px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-gray-300"
+                  className="text-[9px] xs:text-[10px] px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-gray-300"
                 >
                   {s}
                 </span>
               ))}
-              {product.availableSizes.length > 4 && (
-                <span className="text-[10px] text-gray-500 self-center">+{product.availableSizes.length - 4}</span>
+              {product.availableSizes.length > 3 && (
+                <span className="text-[9px] xs:text-[10px] text-gray-500 self-center">+{product.availableSizes.length - 3}</span>
               )}
             </div>
           )}
         </div>
 
         {/* Pricing & CTA */}
-        <div className="pt-3 mt-3 border-t border-white/5">
-          <div className="flex items-baseline justify-between mb-3">
-            <div className="flex items-baseline gap-2">
-              <span className="text-base sm:text-lg font-extrabold text-[#ffd700]">
+        <div className="pt-2.5 xs:pt-3 mt-2.5 xs:mt-3 border-t border-white/5">
+          <div className="flex items-baseline justify-between mb-2 xs:mb-3">
+            <div className="flex items-baseline gap-1.5 xs:gap-2">
+              <span className="text-sm xs:text-base sm:text-lg font-extrabold text-[#ffd700]">
                 ৳{product.discountPrice ? product.discountPrice.toLocaleString('en-US') : product.price.toLocaleString('en-US')}
               </span>
               {product.discountPrice && (
-                <span className="text-xs text-gray-400 line-through">
+                <span className="text-[10px] xs:text-xs text-gray-400 line-through">
                   ৳{product.price.toLocaleString('en-US')}
                 </span>
               )}
             </div>
             <button
               onClick={handleWhatsAppInquiry}
-              className="text-xs text-[#25D366] hover:text-[#28e770] flex items-center gap-1 transition-colors"
+              className="text-[11px] xs:text-xs text-[#25D366] hover:text-[#28e770] flex items-center gap-1 transition-colors"
               title="WhatsApp এ প্রশ্ন করুন"
             >
-              <MessageCircle size={14} />
+              <MessageCircle size={13} />
               <span className="hidden sm:inline">WhatsApp</span>
             </button>
           </div>
 
           {/* Mobile Buttons */}
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-1.5 xs:gap-2">
             <button
               onClick={handleAddToCart}
-              className="py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs font-semibold flex items-center justify-center gap-1 transition-all active:scale-95"
+              className="py-1.5 xs:py-2 px-1 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white text-[11px] xs:text-xs font-semibold flex items-center justify-center gap-1 transition-all active:scale-95"
             >
-              <ShoppingBag size={13} className="text-[#ffd700]" />
+              <ShoppingBag size={12} className="text-[#ffd700]" />
               <span>কার্টে নিন</span>
             </button>
             <button
               onClick={handleQuickBuy}
-              className="py-2 rounded-xl gold-gradient-btn text-xs font-bold transition-all active:scale-95 shadow-md"
+              className="py-1.5 xs:py-2 px-1 rounded-xl gold-gradient-btn text-[11px] xs:text-xs font-bold transition-all active:scale-95 shadow-md truncate"
             >
               অর্ডার করুন
             </button>
